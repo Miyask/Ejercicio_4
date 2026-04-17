@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Inter", sans-serif;
+
+  /* High-Contrast Premium Minimalism */
+  --color-min-bg: #FFFFFF;
+  --color-min-surface: #F8FAFC;
+  --color-min-text-main: #0F172A;
+  --color-min-text-muted: #64748B;
+  --color-min-accent: #1E293B;
+  --color-min-border: #E2E8F0;
+  --color-min-action: #2563EB;
+
+  /* Compatibility / Legacy Cleanup */
+  --color-executive-navy: #0F172A;
+  --color-executive-blue: #1E293B;
+}
+
+@layer base {
+  body {
+    @apply bg-min-bg text-min-text-main font-sans selection:bg-min-action/10 selection:text-min-action;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+.executive-gradient {
+  background: #0F172A; /* Clean minimalism doesn't use the navy gradient from the prev theme */
+}
